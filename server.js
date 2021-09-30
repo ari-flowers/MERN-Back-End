@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 9000
-
+require('./db/db')
 
 
 // ======================================================
@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 9000
 const crittersController = require('./controllers/critters.js')
 app.use(express.json())
 app.use('/critters', crittersController)
+
 
 //=======================================================
 //        LISTENERS
