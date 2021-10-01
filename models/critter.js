@@ -6,11 +6,10 @@ const critterSchema = mongoose.Schema({
     required: true,
   },
   age: {
-    type: Integer
+    type: Number
   },
   species: {
     type: String,
-    required: true,
     default: 'unknown',
   },
   domesticated: {
@@ -19,7 +18,11 @@ const critterSchema = mongoose.Schema({
   image: {
     type: String,
     default: ''
+  },
+  description: {
+    type: String,
+    default: ''
   }
 }, {timestamps: true})
 
-module.exports = mongoose.model('critter', critterSchema)
+module.exports = mongoose.model('Critter', critterSchema)
