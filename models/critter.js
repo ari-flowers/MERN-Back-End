@@ -10,13 +10,16 @@ const critterSchema = mongoose.Schema({
   },
   species: {
     type: String,
-    required: true,
     default: 'unknown',
   },
   domesticated: {
     type: Boolean
   },
   image: {
+    type: String,
+    default: ''
+  },
+  description: {
     type: String,
     default: ''
   }
